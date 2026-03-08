@@ -241,6 +241,7 @@ body.kob-page .product-grid {
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  height: 100%;
   padding-bottom: 0.9rem;
   transition: transform 0.22s ease, box-shadow 0.22s ease;
 }
@@ -383,6 +384,7 @@ body.kob-page .product-grid {
 }
 
 .product-card .btn-primary {
+  margin-top: auto;
   margin-bottom: 0.55rem;
 }
 
