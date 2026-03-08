@@ -8,6 +8,9 @@ const brandSelect = document.querySelector('#brand');
 const seriesSelect = document.querySelector('#series');
 const brandGroup = document.querySelector('#brandGroup');
 const seriesGroup = document.querySelector('#seriesGroup');
+const listingGrid = document.querySelector('#listingGrid');
+
+let allListings = [];
 
 const filterHierarchy = {
   Grafikkort: {
@@ -25,6 +28,12 @@ const filterHierarchy = {
     'G.Skill': ['Trident Z', 'Ripjaws'],
     Crucial: ['Pro', 'Ballistix']
   }
+};
+
+const dealBadgeMap = {
+  good: { label: 'God deal', className: 'star-good' },
+  fair: { label: 'Fair deal', className: 'star-fair' },
+  unfair: { label: 'Unfair deal', className: 'star-unfair' }
 };
 
 const updateSliderVisual = (slider) => {
@@ -96,24 +105,120 @@ const syncSeriesOptions = () => {
   setDropdownState(seriesGroup, seriesSelect, Boolean(selectedBrand));
 };
 
+const createListingCard = (listing) => {
+  const deal = dealBadgeMap[listing.dealRating] || dealBadgeMap.fair;
+
+  return `
+    <article class="product-card" data-id="${listing.id}">
+      <div class="product-image-wrap">
+        <span class="deal-badge ${deal.className}">${deal.label}</span>
+        <img src="${listing.image}" alt="${listing.title} ${listing.condition.toLowerCase()} ${listing.category.toLowerCase()}" />
+      </div>
+      <div class="product-topline">
+        <h3>${listing.title} (${listing.condition})</h3>
+        <p class="price">${formatDkk(listing.price)}</p>
+      </div>
+      <p class="description">${listing.description}</p>
+      <a href="#" class="read-more">Læs mere</a>
+      <button class="btn btn-primary" type="button">Skriv til sælger</button>
+      <button class="btn btn-secondary" type="button">Giv et bud</button>
+    </article>
+  `;
+};
+
+const filterListings = () => {
+  const selectedCategory = categorySelect?.value || '';
+  const selectedBrand = brandSelect?.value || '';
+  const selectedSeries = seriesSelect?.value || '';
+  const maxPrice = Number(priceRange?.value || 0);
+  const maxDistance = Number(distanceRange?.value || 0);
+  const isOpenDistance = maxDistance === Number(distanceRange?.max || 50);
+
+  return allListings.filter((listing) => {
+    if (selectedCategory && listing.category !== selectedCategory) {
+      return false;
+    }
+
+    if (selectedBrand && listing.brand !== selectedBrand) {
+      return false;
+    }
+
+    if (selectedSeries && listing.series !== selectedSeries) {
+      return false;
+    }
+
+    if (listing.price > maxPrice) {
+      return false;
+    }
+
+    if (!isOpenDistance && listing.distance > maxDistance) {
+      return false;
+    }
+
+    return true;
+  });
+};
+
+const renderListings = () => {
+  if (!listingGrid) {
+    return;
+  }
+
+  const listings = filterListings();
+
+  if (!listings.length) {
+    listingGrid.innerHTML = '<p>Ingen annoncer matcher de valgte filtre.</p>';
+    return;
+  }
+
+  listingGrid.innerHTML = listings.map(createListingCard).join('');
+};
+
+const setupPriceRange = () => {
+  if (!priceRange || !priceRangeValue || !allListings.length) {
+    return;
+  }
+
+  const maxListingPrice = Math.max(...allListings.map((listing) => listing.price));
+  const normalizedMaxPrice = Math.ceil(maxListingPrice / 1000) * 1000;
+
+  priceRange.max = String(normalizedMaxPrice);
+  priceRange.value = String(normalizedMaxPrice);
+  priceRangeValue.textContent = formatDkk(normalizedMaxPrice);
+  updateSliderVisual(priceRange);
+};
+
+const loadListings = async () => {
+  const response = await fetch('data/listings.json');
+  allListings = await response.json();
+};
+
 priceRange?.addEventListener('input', () => {
   priceRangeValue.textContent = formatDkk(priceRange.value);
   updateSliderVisual(priceRange);
+  renderListings();
 });
 
 distanceRange?.addEventListener('input', () => {
   const value = Number(distanceRange.value);
   distanceRangeValue.textContent = value === 50 ? '50+ km' : `${value} km`;
   updateSliderVisual(distanceRange);
+  renderListings();
 });
 
 categorySelect?.addEventListener('change', () => {
   syncBrandOptions();
+  renderListings();
 });
 
 brandSelect?.addEventListener('change', () => {
   syncSeriesOptions();
+  renderListings();
 });
+
+seriesSelect?.addEventListener('change', renderListings);
+
+document.querySelector('.cta-results')?.addEventListener('click', renderListings);
 
 document.querySelectorAll('button').forEach((button) => {
   button.addEventListener('click', () => {
@@ -128,9 +233,17 @@ document.querySelectorAll('button').forEach((button) => {
   });
 });
 
-if (priceRange && distanceRange) {
-  updateSliderVisual(priceRange);
-  updateSliderVisual(distanceRange);
-}
+const initMarketplace = async () => {
+  syncBrandOptions();
 
-syncBrandOptions();
+  if (priceRange && distanceRange) {
+    updateSliderVisual(priceRange);
+    updateSliderVisual(distanceRange);
+  }
+
+  await loadListings();
+  setupPriceRange();
+  renderListings();
+};
+
+initMarketplace();
