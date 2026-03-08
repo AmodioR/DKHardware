@@ -404,3 +404,62 @@ input[type="range"] {
 .placeholder-page p {
   color: var(--text-soft);
 }
+
+.sell-layout {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2.5rem;
+}
+
+.sell-card {
+  background: linear-gradient(180deg, #2a385d 0%, #293355 100%);
+  border-radius: 2rem;
+  padding: 1.85rem;
+  box-shadow: var(--shadow);
+}
+
+.sell-card h1 {
+  margin: 0 0 1.25rem;
+}
+
+.sell-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+input[type="number"],
+input[type="text"],
+textarea {
+  width: 100%;
+  border: 1px solid transparent;
+  color: var(--text);
+  border-radius: 0.85rem;
+  padding: 0.75rem 0.85rem;
+  background: #202d4a;
+  font: inherit;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+input[type="number"]:focus-visible,
+input[type="text"]:focus-visible,
+textarea:focus-visible {
+  outline: none;
+  border-color: #6d8dff;
+}
+
+.sell-feedback {
+  margin: 0;
+  color: #dbe4ff;
+  font-size: 0.92rem;
+}
+
+@media (max-width: 900px) {
+  .sell-layout {
+    padding: 1.5rem;
+  }
+}
