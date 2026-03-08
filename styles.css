@@ -190,6 +190,29 @@ input[type="range"] {
   margin: 0.5rem 0;
 }
 
+.deal-legend .star-badge {
+  display: inline-grid;
+  place-items: center;
+  width: 1.1rem;
+  height: 1.1rem;
+  margin-right: 0.3rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.deal-legend .star-good {
+  color: #ffcb66;
+}
+
+.deal-legend .star-fair {
+  color: #1dd398;
+}
+
+.deal-legend .star-unfair {
+  color: #ff455d;
+}
+
 .product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, 320px);
