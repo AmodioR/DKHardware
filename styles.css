@@ -550,8 +550,9 @@ body.kob-page .product-grid {
 }
 
 .home-hero-btn {
-  display: inline-flex;
+  display: flex;
   margin-top: 1.4rem;
+  margin-inline: auto;
   text-decoration: none;
 }
 
@@ -566,9 +567,10 @@ body.kob-page .product-grid {
 }
 
 .featured-row {
+  --featured-gap: 1.4rem;
   display: grid;
-  grid-template-columns: minmax(0, max-content) 320px;
-  gap: 1.4rem;
+  grid-template-columns: minmax(0, max-content) 272px;
+  gap: var(--featured-gap);
   justify-content: center;
   align-items: stretch;
 }
@@ -576,11 +578,11 @@ body.kob-page .product-grid {
 .featured-listings {
   display: grid;
   grid-template-columns: repeat(3, 320px);
-  gap: 1.4rem;
+  gap: var(--featured-gap);
 }
 
 .featured-cta-card {
-  width: 320px;
+  width: 272px;
   border-radius: 1rem;
   background: linear-gradient(180deg, #253964 0%, #1c2d51 100%);
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
@@ -715,12 +717,7 @@ textarea:focus-visible {
 
   .home-hero {
     padding: 1.5rem;
-    text-align: center;
-  }
-
-  .home-hero p {
-    margin-left: auto;
-    margin-right: auto;
+    text-align: left;
   }
 
   .featured-row {
