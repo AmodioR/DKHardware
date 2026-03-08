@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Opret annonce | DK Hardware</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="container header">
+      <h1>Opret annonce</h1>
+      <nav>
+        <a href="index.html">Forside</a>
+        <a href="create.html">Opret annonce</a>
+      </nav>
+    </header>
+
+    <main class="container">
+      <form id="createListingForm" class="card form-grid">
+        <label>
+          Titel
+          <input type="text" name="title" required />
+        </label>
+
+        <label>
+          Kategori
+          <select name="category" required>
+            <option value="GPU">GPU</option>
+            <option value="CPU">CPU</option>
+          </select>
+        </label>
+
+        <label>
+          Pris (DKK)
+          <input type="number" name="price" min="1" required />
+        </label>
+
+        <label>
+          Vurderet markedspris (DKK)
+          <input type="number" name="estimatedMarketPrice" min="1" required />
+        </label>
+
+        <label>
+          Beskrivelse
+          <textarea name="description" rows="4" required></textarea>
+        </label>
+
+        <button type="submit">Gem annonce</button>
+      </form>
+    </main>
+
+    <script src="js/common.js"></script>
+    <script src="js/create.js"></script>
+  </body>
+</html>
