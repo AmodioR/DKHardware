@@ -551,6 +551,7 @@ body.kob-page .product-grid {
 
 .home-hero-btn {
   display: flex;
+  width: fit-content;
   margin-top: 1.4rem;
   margin-inline: auto;
   text-decoration: none;
