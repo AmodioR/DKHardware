@@ -143,11 +143,14 @@ input[type="range"] {
 
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fill, 320px);
   gap: 1.4rem;
+  justify-content: start;
 }
 
 .product-card {
+  width: 320px;
+
   background: #132249;
   border-radius: 1rem;
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
@@ -334,7 +337,7 @@ input[type="range"] {
 
 @media (max-width: 1140px) {
   .product-grid {
-    grid-template-columns: repeat(2, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fill, 320px);
   }
 }
 
@@ -368,6 +371,7 @@ input[type="range"] {
   }
 
   .product-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fill, 300px);
+    justify-content: center;
   }
 }
