@@ -528,13 +528,13 @@ body.kob-page .product-grid {
 }
 
 .home-hero {
-  max-width: 900px;
+  max-width: 980px;
   margin: 0 auto;
   padding: 2.1rem 2rem;
   background: linear-gradient(180deg, #2a385d 0%, #293355 100%);
   border-radius: 1.5rem;
   box-shadow: var(--shadow);
-  text-align: center;
+  text-align: left;
 }
 
 .home-hero h1 {
@@ -543,10 +543,16 @@ body.kob-page .product-grid {
 }
 
 .home-hero p {
-  margin: 1rem auto 0;
-  max-width: 760px;
+  margin: 1rem 0 0;
+  max-width: 860px;
   color: var(--text-soft);
   line-height: 1.55;
+}
+
+.home-hero-btn {
+  display: inline-flex;
+  margin-top: 1.4rem;
+  text-decoration: none;
 }
 
 .featured-section {
@@ -557,6 +563,50 @@ body.kob-page .product-grid {
   margin: 0 0 1.2rem;
   text-align: center;
   font-size: 1.5rem;
+}
+
+.featured-row {
+  display: grid;
+  grid-template-columns: minmax(0, max-content) 320px;
+  gap: 1.4rem;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.featured-listings {
+  display: grid;
+  grid-template-columns: repeat(3, 320px);
+  gap: 1.4rem;
+}
+
+.featured-cta-card {
+  width: 320px;
+  border-radius: 1rem;
+  background: linear-gradient(180deg, #253964 0%, #1c2d51 100%);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.featured-cta-card h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.featured-cta-card p {
+  margin: 0.85rem 0 1.2rem;
+  color: var(--text-soft);
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+.featured-cta-card .btn {
+  margin-top: auto;
+  width: 100%;
+  text-decoration: none;
+  justify-content: center;
+  display: inline-flex;
 }
 
 .sell-layout {
@@ -665,5 +715,25 @@ textarea:focus-visible {
 
   .home-hero {
     padding: 1.5rem;
+    text-align: center;
+  }
+
+  .home-hero p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .featured-row {
+    grid-template-columns: 1fr;
+  }
+
+  .featured-listings {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    justify-items: center;
+  }
+
+  .featured-cta-card {
+    width: min(100%, 680px);
+    margin: 0 auto;
   }
 }

@@ -78,7 +78,7 @@ const renderFeaturedListings = (listings) => {
 
   const featuredListings = listings
     .filter((listing) => normalizeDealRating(listing.dealRating) === 'good')
-    .slice(0, 4);
+    .slice(0, 3);
 
   if (!featuredListings.length) {
     featuredListingGrid.innerHTML = '<p>Ingen fremhævede deals endnu.</p>';
