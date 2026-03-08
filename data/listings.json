@@ -1,0 +1,26 @@
+[
+  {
+    "id": "l1",
+    "title": "NVIDIA RTX 3070",
+    "category": "GPU",
+    "price": 2500,
+    "estimatedMarketPrice": 3000,
+    "description": "Velholdt kort. Ikke brugt til mining."
+  },
+  {
+    "id": "l2",
+    "title": "AMD Ryzen 5 5600X",
+    "category": "CPU",
+    "price": 900,
+    "estimatedMarketPrice": 1100,
+    "description": "Kører stabilt, inkl. original køler."
+  },
+  {
+    "id": "l3",
+    "title": "NVIDIA GTX 1660 Super",
+    "category": "GPU",
+    "price": 1200,
+    "estimatedMarketPrice": 1000,
+    "description": "Fungerer fint til 1080p gaming."
+  }
+]
