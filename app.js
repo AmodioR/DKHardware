@@ -12,6 +12,8 @@ const listingGrid = document.querySelector('#listingGrid');
 
 let allListings = [];
 
+const STORAGE_KEY = 'dkhardware.userListings';
+
 const filterHierarchy = {
   Grafikkort: {
     NVIDIA: ['RTX 5090', 'RTX 5080', 'RTX 5070', 'RTX 4090', 'RTX 4080', 'RTX 4070', 'RTX 3090', 'RTX 3080'],
@@ -62,6 +64,20 @@ const filterHierarchy = {
     'be quiet!': ['Silent Wings 4', 'Pure Wings 3', 'Light Wings'],
     Arctic: ['P12 PWM PST', 'P14 PWM PST', 'F12 PWM'],
     Corsair: ['AF120 Elite', 'SP140 RGB Elite', 'QL120']
+  }
+};
+
+
+const getUserListings = () => {
+  const raw = localStorage.getItem(STORAGE_KEY);
+  if (!raw) {
+    return [];
+  }
+
+  try {
+    return JSON.parse(raw);
+  } catch {
+    return [];
   }
 };
 
@@ -228,7 +244,8 @@ const setupPriceRange = () => {
 
 const loadListings = async () => {
   const response = await fetch('data/listings.json');
-  allListings = await response.json();
+  const baseListings = await response.json();
+  allListings = [...getUserListings(), ...baseListings];
 };
 
 priceRange?.addEventListener('input', () => {

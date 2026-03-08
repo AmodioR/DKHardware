@@ -21,9 +21,74 @@
       </div>
     </header>
 
-    <main class="placeholder-page">
-      <h1>Sælg</h1>
-      <p>Denne side er en midlertidig placeholder for salgssiden.</p>
+    <main class="sell-layout">
+      <section class="sell-card" aria-label="Opret opslag">
+        <h1>Opret nyt opslag</h1>
+        <form id="sellForm" class="sell-form">
+          <div class="filter-group">
+            <label for="category">Kategori</label>
+            <select id="category" name="category" required>
+              <option value="">Vælg kategori</option>
+              <option value="Grafikkort">Grafikkort</option>
+              <option value="CPU">CPU</option>
+              <option value="RAM">RAM</option>
+              <option value="Bundkort">Bundkort</option>
+              <option value="Lager">Lager</option>
+              <option value="Strømforsyning">Strømforsyning</option>
+              <option value="Kabinetter">Kabinetter</option>
+              <option value="CPU-kølere">CPU-kølere</option>
+              <option value="Kabinetkølere">Kabinetkølere</option>
+            </select>
+          </div>
+
+          <div class="filter-group filter-group-disabled" id="brandGroup">
+            <label for="brand">Mærke</label>
+            <select id="brand" name="brand" disabled required>
+              <option value="">Vælg mærke</option>
+            </select>
+          </div>
+
+          <div class="filter-group filter-group-disabled" id="seriesGroup">
+            <label for="series">Serie</label>
+            <select id="series" name="series" disabled required>
+              <option value="">Vælg serie</option>
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <label for="condition">Stand</label>
+            <select id="condition" name="condition" required>
+              <option value="Ny">Ny</option>
+              <option value="Brugt">Brugt</option>
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <label for="price">Pris</label>
+            <input id="price" name="price" type="number" min="0" step="1" placeholder="F.eks. 3500" required />
+          </div>
+
+          <div class="filter-group">
+            <label for="location">Lokation</label>
+            <input id="location" name="location" type="text" placeholder="F.eks. Aarhus" required />
+          </div>
+
+          <div class="filter-group">
+            <label for="distance">Afstand</label>
+            <input id="distance" name="distance" type="number" min="0" step="1" placeholder="F.eks. 12" required />
+          </div>
+
+          <div class="filter-group">
+            <label for="description">Beskrivelse</label>
+            <textarea id="description" name="description" rows="5" placeholder="Beskriv varen, tilstand og tilbehør" required></textarea>
+          </div>
+
+          <button class="btn btn-primary" type="submit">Opret opslag</button>
+          <p class="sell-feedback" id="sellFeedback" aria-live="polite"></p>
+        </form>
+      </section>
     </main>
+
+    <script src="js/saelg.js"></script>
   </body>
 </html>
