@@ -25,6 +25,11 @@ body {
   color: var(--text);
 }
 
+body.kob-page {
+  height: 100vh;
+  overflow: hidden;
+}
+
 a {
   color: inherit;
 }
@@ -36,6 +41,14 @@ a {
   gap: 1rem;
   padding: 1.1rem 2.5rem;
   border-bottom: 1px solid rgba(226, 233, 255, 0.45);
+}
+
+body.kob-page .site-header {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: rgba(5, 15, 44, 0.95);
+  backdrop-filter: blur(4px);
 }
 
 .brand-link {
@@ -86,6 +99,15 @@ a {
   align-items: start;
 }
 
+body.kob-page .marketplace-layout {
+  --header-height: 96px;
+  grid-template-columns: 320px minmax(0, 1fr);
+  gap: 2rem;
+  width: min(100%, 1380px);
+  height: calc(100vh - var(--header-height));
+  padding: 1.5rem 2rem 2rem;
+}
+
 .filter-card {
   background: linear-gradient(180deg, #2a385d 0%, #293355 100%);
   border-radius: 2rem;
@@ -94,6 +116,13 @@ a {
   flex-direction: column;
   gap: 1rem;
   box-shadow: var(--shadow);
+}
+
+body.kob-page .filter-card {
+  position: sticky;
+  top: 1.5rem;
+  max-height: calc(100vh - var(--header-height) - 3.5rem);
+  overflow: auto;
 }
 
 .filter-group {
@@ -167,6 +196,17 @@ input[type="range"] {
   justify-content: center;
   max-width: 1388px;
   margin: 0 auto;
+}
+
+body.kob-page .product-grid {
+  align-content: start;
+  justify-content: start;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 320px));
+  max-width: none;
+  margin: 0;
+  height: 100%;
+  overflow-y: auto;
+  padding-right: 0.75rem;
 }
 
 .product-card {
@@ -377,6 +417,30 @@ input[type="range"] {
 
   .filter-card {
     margin-bottom: 0.4rem;
+  }
+
+  body.kob-page {
+    height: auto;
+    overflow: auto;
+  }
+
+  body.kob-page .site-header {
+    position: static;
+    backdrop-filter: none;
+  }
+
+  body.kob-page .marketplace-layout {
+    height: auto;
+    width: 100%;
+    padding: 1.5rem;
+  }
+
+  body.kob-page .filter-card,
+  body.kob-page .product-grid {
+    position: static;
+    max-height: none;
+    height: auto;
+    overflow: visible;
   }
 }
 
