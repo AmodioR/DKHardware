@@ -84,7 +84,29 @@ const getUserListings = () => {
 const dealBadgeMap = {
   good: { label: 'God deal', className: 'star-good' },
   fair: { label: 'Fair deal', className: 'star-fair' },
-  unfair: { label: 'Unfair deal', className: 'star-unfair' }
+  unfair: { label: 'Dårlig deal', className: 'star-unfair' }
+};
+
+const normalizeDealRating = (dealRating) => {
+  if (!dealRating) {
+    return 'fair';
+  }
+
+  const normalized = String(dealRating).trim().toLowerCase();
+
+  if (['good', 'god deal', 'god'].includes(normalized)) {
+    return 'good';
+  }
+
+  if (['fair', 'fair deal'].includes(normalized)) {
+    return 'fair';
+  }
+
+  if (['unfair', 'dårlig deal', 'darlig deal', 'dårlig'].includes(normalized)) {
+    return 'unfair';
+  }
+
+  return 'fair';
 };
 
 const updateSliderVisual = (slider) => {
@@ -160,12 +182,12 @@ const syncSeriesOptions = () => {
 };
 
 const createListingCard = (listing) => {
-  const deal = dealBadgeMap[listing.dealRating] || dealBadgeMap.fair;
+  const deal = dealBadgeMap[normalizeDealRating(listing.dealRating)] || dealBadgeMap.fair;
 
   return `
     <article class="product-card" data-id="${listing.id}">
       <div class="product-image-wrap">
-        <span class="deal-badge ${deal.className}">${deal.label}</span>
+        <span class="deal-badge ${deal.className}" aria-label="${deal.label}" title="${deal.label}">★</span>
         <img src="${listing.image}" alt="${listing.title} ${listing.condition.toLowerCase()} ${listing.category.toLowerCase()}" />
       </div>
       <div class="product-topline">
