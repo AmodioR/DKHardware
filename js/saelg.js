@@ -72,6 +72,8 @@ const brandSelect = document.getElementById('brand');
 const seriesSelect = document.getElementById('series');
 const brandGroup = document.getElementById('brandGroup');
 const seriesGroup = document.getElementById('seriesGroup');
+const imageInput = document.getElementById('image');
+const imagePreview = document.getElementById('imagePreview');
 
 const populateSelectOptions = (select, placeholder, options = []) => {
   select.innerHTML = '';
@@ -139,7 +141,29 @@ const saveUserListing = (listing) => {
 
 const toTitle = (brand, series) => `${brand} ${series}`.trim();
 
-const buildListing = (formData) => {
+const readImageAsDataUrl = (file) =>
+  new Promise((resolve, reject) => {
+    const reader = new FileReader();
+
+    reader.onload = () => resolve(typeof reader.result === 'string' ? reader.result : '');
+    reader.onerror = () => reject(new Error('Kunne ikke læse billedfilen.'));
+    reader.readAsDataURL(file);
+  });
+
+const getFallbackImage = (category) => categoryImageMap[category] || 'images/placeholders/default.jpg';
+
+const updateImagePreview = (src) => {
+  if (!src) {
+    imagePreview.removeAttribute('src');
+    imagePreview.classList.remove('is-visible');
+    return;
+  }
+
+  imagePreview.src = src;
+  imagePreview.classList.add('is-visible');
+};
+
+const buildListing = (formData, imageSrc) => {
   const category = formData.get('category');
   const brand = formData.get('brand');
   const series = formData.get('series');
@@ -155,25 +179,59 @@ const buildListing = (formData) => {
     price,
     estimatedMarketPrice: price,
     location: formData.get('location').trim(),
-    distance: Number(formData.get('distance')),
     description: formData.get('description').trim(),
     dealRating: 'fair',
-    image: categoryImageMap[category] || 'images/placeholders/default.jpg'
+    image: imageSrc || getFallbackImage(category)
   };
 };
 
 categorySelect.addEventListener('change', syncBrandOptions);
 brandSelect.addEventListener('change', syncSeriesOptions);
 
-sellForm.addEventListener('submit', (event) => {
+imageInput.addEventListener('change', async () => {
+  const [selectedFile] = imageInput.files || [];
+
+  if (!selectedFile) {
+    updateImagePreview('');
+    return;
+  }
+
+  try {
+    const previewSrc = await readImageAsDataUrl(selectedFile);
+    updateImagePreview(previewSrc);
+    feedback.textContent = '';
+  } catch {
+    updateImagePreview('');
+    feedback.textContent = 'Billedet kunne ikke indlæses. Prøv en anden fil.';
+  }
+});
+
+sellForm.addEventListener('submit', async (event) => {
   event.preventDefault();
+  feedback.textContent = '';
 
   const formData = new FormData(sellForm);
-  const listing = buildListing(formData);
+  const category = formData.get('category');
+  const [selectedFile] = imageInput.files || [];
+
+  let imageSrc = getFallbackImage(category);
+
+  if (selectedFile) {
+    try {
+      imageSrc = await readImageAsDataUrl(selectedFile);
+    } catch {
+      feedback.textContent = 'Billedet kunne ikke gemmes. Opslaget blev oprettet med standardbillede.';
+    }
+  }
+
+  const listing = buildListing(formData, imageSrc);
   saveUserListing(listing);
 
-  feedback.textContent = 'Opslag oprettet og gemt lokalt.';
+  if (!feedback.textContent) {
+    feedback.textContent = 'Opslag oprettet og gemt lokalt.';
+  }
   sellForm.reset();
+  updateImagePreview('');
   syncBrandOptions();
 });
 

@@ -445,6 +445,46 @@ textarea {
   min-height: 120px;
 }
 
+
+input[type="file"] {
+  width: 100%;
+  border: 1px dashed rgba(219, 228, 255, 0.35);
+  color: var(--text-soft);
+  border-radius: 0.85rem;
+  padding: 0.6rem 0.75rem;
+  background: #202d4a;
+  font: inherit;
+}
+
+input[type="file"]::file-selector-button {
+  border: 1px solid rgba(219, 228, 255, 0.35);
+  border-radius: 999px;
+  padding: 0.38rem 0.75rem;
+  margin-right: 0.65rem;
+  background: rgba(219, 228, 255, 0.1);
+  color: var(--text);
+  font: inherit;
+  cursor: pointer;
+}
+
+input[type="file"]:focus-visible {
+  outline: none;
+  border-color: #6d8dff;
+}
+
+.sell-image-preview {
+  display: none;
+  width: 100%;
+  max-width: 240px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(219, 228, 255, 0.2);
+}
+
+.sell-image-preview.is-visible {
+  display: block;
+}
 input[type="number"]:focus-visible,
 input[type="text"]:focus-visible,
 textarea:focus-visible {
