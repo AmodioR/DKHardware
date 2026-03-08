@@ -205,7 +205,7 @@ input[type="range"] {
 }
 
 
-.deal-badge {
+.product-card .deal-badge {
   position: absolute;
   top: 0.6rem;
   left: 0.6rem;
@@ -219,7 +219,7 @@ input[type="range"] {
   z-index: 1;
 }
 
-.star-badge {
+.product-card .star-badge {
   position: absolute;
   top: 10px;
   left: 10px;
@@ -232,17 +232,17 @@ input[type="range"] {
   font-weight: 700;
 }
 
-.star-good {
+.product-card .star-good {
   color: #ffcb66;
   background: rgba(4, 20, 62, 0.95);
 }
 
-.star-fair {
+.product-card .star-fair {
   color: #1dd398;
   background: rgba(4, 20, 62, 0.95);
 }
 
-.star-unfair {
+.product-card .star-unfair {
   color: #ff455d;
   background: rgba(4, 20, 62, 0.95);
 }
