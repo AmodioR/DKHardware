@@ -295,30 +295,21 @@ body.kob-page .product-grid {
 
 .product-card .deal-badge {
   position: absolute;
-  top: 0.6rem;
-  left: 0.6rem;
-  padding: 0.22rem 0.5rem;
-  border-radius: 999px;
-  font-size: 0.72rem;
+  top: 10px;
+  left: 10px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 1rem;
   font-weight: 700;
-  letter-spacing: 0.01em;
-  background: rgba(6, 20, 53, 0.94);
+  line-height: 1;
+  background: rgba(4, 20, 62, 0.95);
   border: 1px solid rgba(255, 255, 255, 0.08);
   z-index: 1;
 }
 
-.product-card .star-badge {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  font-size: 1.5rem;
-  font-weight: 700;
-}
 
 .product-card .star-good {
   color: #ffcb66;
