@@ -27,6 +27,36 @@ const filterHierarchy = {
     Kingston: ['Fury Beast', 'Fury Renegade'],
     'G.Skill': ['Trident Z', 'Ripjaws'],
     Crucial: ['Pro', 'Ballistix']
+  },
+  Bundkort: {
+    ASUS: ['ROG Strix', 'TUF Gaming', 'Prime'],
+    MSI: ['MAG Tomahawk', 'MPG Edge', 'PRO Series'],
+    Gigabyte: ['AORUS Elite', 'Gaming X', 'UD']
+  },
+  Lager: {
+    Samsung: ['980 Pro', '990 Pro', '870 EVO'],
+    'Western Digital': ['Black SN850X', 'Blue SN580', 'Red Plus'],
+    Crucial: ['P5 Plus', 'MX500', 'P3']
+  },
+  Strømforsyning: {
+    Corsair: ['RMx', 'RMe', 'HX'],
+    Seasonic: ['Focus GX', 'Prime GX', 'Vertex GX'],
+    bequiet!: ['Pure Power', 'Straight Power', 'Dark Power']
+  },
+  Kabinetter: {
+    NZXT: ['H5 Flow', 'H7 Flow', 'H9 Elite'],
+    Fractal: ['North', 'Meshify 2', 'Pop Air'],
+    Corsair: ['4000D', '5000D', '7000D']
+  },
+  'CPU-kølere': {
+    Noctua: ['NH-D15', 'NH-U12S', 'NH-L12S'],
+    Corsair: ['iCUE H100i', 'iCUE H150i', 'iCUE H170i'],
+    Arctic: ['Liquid Freezer II 240', 'Liquid Freezer II 360', 'Freezer 36']
+  },
+  Kabinetkølere: {
+    Noctua: ['NF-A12x25', 'NF-P12 redux', 'NF-A14'],
+    bequiet!: ['Silent Wings 4', 'Pure Wings 3', 'Light Wings'],
+    Arctic: ['P12 PWM PST', 'P14 PWM PST', 'F12 PWM']
   }
 };
 
