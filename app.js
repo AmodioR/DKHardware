@@ -49,7 +49,7 @@ const filterHierarchy = {
     NZXT: ['H5 Flow', 'H7 Flow', 'H9 Elite'],
     Fractal: ['North', 'Meshify 2', 'Pop Air'],
     Corsair: ['4000D', '5000D', '7000D'],
-    Lian Li: ['Lancool 216', 'O11 Dynamic', 'A3-mATX']
+    'Lian Li': ['Lancool 216', 'O11 Dynamic', 'A3-mATX']
   },
   'CPU-kølere': {
     Noctua: ['NH-D15', 'NH-U12S', 'NH-L12S'],
@@ -121,6 +121,8 @@ const syncBrandOptions = () => {
 
   populateSelectOptions(brandSelect, 'Vælg mærke', brands);
   populateSelectOptions(seriesSelect, 'Vælg serie');
+  brandSelect.value = '';
+  seriesSelect.value = '';
 
   const hasCategory = Boolean(selectedCategory);
   setDropdownState(brandGroup, brandSelect, hasCategory);
@@ -137,6 +139,7 @@ const syncSeriesOptions = () => {
   const series = selectedCategory && selectedBrand ? filterHierarchy[selectedCategory]?.[selectedBrand] || [] : [];
 
   populateSelectOptions(seriesSelect, 'Vælg serie', series);
+  seriesSelect.value = '';
   setDropdownState(seriesGroup, seriesSelect, Boolean(selectedBrand));
 };
 
@@ -163,8 +166,8 @@ const createListingCard = (listing) => {
 
 const filterListings = () => {
   const selectedCategory = categorySelect?.value || '';
-  const selectedBrand = brandSelect?.value || '';
-  const selectedSeries = seriesSelect?.value || '';
+  const selectedBrand = selectedCategory && !brandSelect?.disabled ? brandSelect.value : '';
+  const selectedSeries = selectedBrand && !seriesSelect?.disabled ? seriesSelect.value : '';
   const maxPrice = Number(priceRange?.value || 0);
   const maxDistance = Number(distanceRange?.value || 0);
   const isOpenDistance = maxDistance === Number(distanceRange?.max || 50);
