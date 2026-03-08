@@ -228,7 +228,8 @@ body.kob-page .product-grid {
   align-content: start;
   justify-content: start;
   grid-template-columns: repeat(auto-fill, 320px);
-  max-width: none;
+  max-width: calc((4 * 320px) + (3 * 1.4rem));
+  width: min(100%, calc((4 * 320px) + (3 * 1.4rem)));
   margin: 0;
 }
 
