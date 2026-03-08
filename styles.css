@@ -123,6 +123,15 @@ select:focus-visible {
   border-color: #6d8dff;
 }
 
+
+.filter-group-disabled {
+  opacity: 0.55;
+}
+
+.filter-group-disabled select {
+  cursor: not-allowed;
+}
+
 .range-meta {
   display: flex;
   justify-content: space-between;
