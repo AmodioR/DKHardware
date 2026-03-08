@@ -103,7 +103,8 @@ body.kob-page .marketplace-layout {
   --header-height: 96px;
   grid-template-columns: 340px minmax(0, 1fr);
   gap: 2rem;
-  width: min(100%, 1400px);
+  width: 100%;
+  max-width: none;
   height: calc(100vh - var(--header-height));
   padding: 1.5rem 2rem 2rem;
 }
@@ -201,15 +202,34 @@ input[type="range"] {
 body.kob-page .listings-panel {
   height: 100%;
   overflow-y: auto;
-  padding-right: 0.75rem;
+  padding-right: 0.35rem;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(143, 160, 203, 0.45) rgba(11, 24, 57, 0.15);
+}
+
+body.kob-page .listings-panel::-webkit-scrollbar {
+  width: 8px;
+}
+
+body.kob-page .listings-panel::-webkit-scrollbar-track {
+  background: rgba(11, 24, 57, 0.15);
+}
+
+body.kob-page .listings-panel::-webkit-scrollbar-thumb {
+  background: rgba(143, 160, 203, 0.45);
+  border-radius: 999px;
+}
+
+body.kob-page .listings-panel::-webkit-scrollbar-thumb:hover {
+  background: rgba(168, 185, 226, 0.6);
 }
 
 body.kob-page .product-grid {
   align-content: start;
-  justify-content: center;
+  justify-content: start;
   grid-template-columns: repeat(auto-fill, 320px);
-  max-width: 1100px;
-  margin: 0 auto;
+  max-width: none;
+  margin: 0;
 }
 
 .product-card {
