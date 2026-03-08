@@ -3,35 +3,179 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DK Hardware Markedsplads</title>
+    <title>Hardware | Markedsplads</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="container header">
-      <h1>DK Hardware Markedsplads</h1>
-      <nav>
-        <a href="index.html">Forside</a>
-        <a href="create.html">Opret annonce</a>
+    <header class="site-header">
+      <div class="brand">Hardware</div>
+      <nav class="main-nav" aria-label="Primær navigation">
+        <a href="#">Hjem</a>
+        <a href="#">Køb</a>
+        <a href="#">Sælg</a>
+        <a href="#">Om</a>
       </nav>
+      <div class="header-actions">
+        <button class="btn btn-outline" type="button">Login</button>
+        <button class="btn btn-muted" type="button">Kom i gang</button>
+      </div>
     </header>
 
-    <main class="container">
-      <section class="toolbar">
-        <label for="categoryFilter">Kategori:</label>
-        <select id="categoryFilter">
-          <option value="ALL">Alle</option>
-          <option value="GPU">GPU</option>
-          <option value="CPU">CPU</option>
-        </select>
-      </section>
+    <main class="marketplace-layout">
+      <aside class="filter-card" aria-label="Filtre">
+        <h2 class="sr-only">Filtre</h2>
 
-      <section>
-        <h2>Annoncer</h2>
-        <div id="listingGrid" class="listing-grid"></div>
+        <div class="filter-group">
+          <label for="category">Kategori</label>
+          <select id="category" name="category">
+            <option>Grafikkort</option>
+            <option>CPU</option>
+            <option>RAM</option>
+            <option>Lagring</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="brand">Mærke</label>
+          <select id="brand" name="brand">
+            <option>Nvidia</option>
+            <option>AMD</option>
+            <option>Intel</option>
+            <option>ASUS</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="series">Serie</label>
+          <select id="series" name="series">
+            <option>Alle</option>
+            <option>RTX 50-serie</option>
+            <option>RTX 40-serie</option>
+            <option>RTX 30-serie</option>
+            <option>GTX 10-serie</option>
+          </select>
+        </div>
+
+        <div class="filter-group slider-group">
+          <label for="priceRange">Pris</label>
+          <div class="range-meta">
+            <span>0 kr.</span>
+            <span id="priceRangeValue">10.000 kr.</span>
+          </div>
+          <input type="range" id="priceRange" min="0" max="10000" step="100" value="10000" />
+        </div>
+
+        <div class="filter-group slider-group">
+          <label for="distanceRange">Afstand til sælger</label>
+          <div class="range-meta">
+            <span>0 km</span>
+            <span id="distanceRangeValue">50+ km</span>
+          </div>
+          <input type="range" id="distanceRange" min="0" max="50" step="1" value="50" />
+        </div>
+
+        <div class="deal-legend" aria-label="Deal score forklaring">
+          <p><span class="star-badge star-good">★</span> = God deal</p>
+          <p><span class="star-badge star-fair">★</span> = Fair deal</p>
+          <p><span class="star-badge star-unfair">★</span> = Unfair deal</p>
+        </div>
+
+        <button class="btn btn-primary cta-results" type="button">Vis resultater</button>
+      </aside>
+
+      <section class="product-grid" aria-label="Produktoversigt">
+        <article class="product-card">
+          <div class="product-image-wrap">
+            <span class="star-badge star-good">★</span>
+            <img src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&w=800&q=80" alt="RTX 5080 grafikkort" />
+          </div>
+          <div class="product-topline">
+            <h3>5080 (Ny)</h3>
+            <p class="price">7.999 kr.</p>
+          </div>
+          <p class="description">Helt nyt kort, kun testet kort. Kvittering medfølger og klar til hurtig handel.</p>
+          <a href="#" class="read-more">Læs mere</a>
+          <button class="btn btn-primary" type="button">Skriv til sælger</button>
+          <button class="btn btn-secondary" type="button">Giv et bud</button>
+        </article>
+
+        <article class="product-card">
+          <div class="product-image-wrap">
+            <span class="star-badge star-unfair">★</span>
+            <img src="https://images.unsplash.com/photo-1591488320449-011701bb6705?auto=format&fit=crop&w=800&q=80" alt="RTX 5060ti grafikkort" />
+          </div>
+          <div class="product-topline">
+            <h3>5060ti (Ny)</h3>
+            <p class="price">4.999 kr.</p>
+          </div>
+          <p class="description">Super fint kort med minimal brug. Original emballage og kvittering er stadig med.</p>
+          <a href="#" class="read-more">Læs mere</a>
+          <button class="btn btn-primary" type="button">Skriv til sælger</button>
+          <button class="btn btn-secondary" type="button">Giv et bud</button>
+        </article>
+
+        <article class="product-card">
+          <div class="product-image-wrap">
+            <span class="star-badge star-fair">★</span>
+            <img src="https://images.unsplash.com/photo-1591799265444-d66432b91588?auto=format&fit=crop&w=800&q=80" alt="GTX 1080ti grafikkort" />
+          </div>
+          <div class="product-topline">
+            <h3>1080ti (Brugt)</h3>
+            <p class="price">999 kr.</p>
+          </div>
+          <p class="description">Solid klassiker med normalt brugsspor. Perfekt som budgetkort til gaming setup.</p>
+          <a href="#" class="read-more">Læs mere</a>
+          <button class="btn btn-primary" type="button">Skriv til sælger</button>
+          <button class="btn btn-secondary" type="button">Giv et bud</button>
+        </article>
+
+        <article class="product-card">
+          <div class="product-image-wrap">
+            <span class="star-badge star-fair">★</span>
+            <img src="https://images.unsplash.com/photo-1593640495253-23196b27a87f?auto=format&fit=crop&w=800&q=80" alt="RTX 3060ti grafikkort" />
+          </div>
+          <div class="product-topline">
+            <h3>3060ti (Brugt)</h3>
+            <p class="price">1.999 kr.</p>
+          </div>
+          <p class="description">Velholdt kort med god temperatur og stabil ydelse. Sælges pga. opgradering.</p>
+          <a href="#" class="read-more">Læs mere</a>
+          <button class="btn btn-primary" type="button">Skriv til sælger</button>
+          <button class="btn btn-secondary" type="button">Giv et bud</button>
+        </article>
+
+        <article class="product-card">
+          <div class="product-image-wrap">
+            <span class="star-badge star-fair">★</span>
+            <img src="https://images.unsplash.com/photo-1555617981-dac3880eac6e?auto=format&fit=crop&w=800&q=80" alt="RTX 2060 Super grafikkort" />
+          </div>
+          <div class="product-topline">
+            <h3>2060 Super (Brugt)</h3>
+            <p class="price">1.000 kr.</p>
+          </div>
+          <p class="description">Ældre men driftssikkert kort. Ideelt til casual gaming og e-sportstitler.</p>
+          <a href="#" class="read-more">Læs mere</a>
+          <button class="btn btn-primary" type="button">Skriv til sælger</button>
+          <button class="btn btn-secondary" type="button">Giv et bud</button>
+        </article>
+
+        <article class="product-card">
+          <div class="product-image-wrap">
+            <span class="star-badge star-good">★</span>
+            <img src="https://images.unsplash.com/photo-1624705002806-5d72df19c3de?auto=format&fit=crop&w=800&q=80" alt="RTX 4090 grafikkort" />
+          </div>
+          <div class="product-topline">
+            <h3>4090 (Brugt)</h3>
+            <p class="price">12.000 kr.</p>
+          </div>
+          <p class="description">Topmodel med ekstrem performance. Fremstår pæn, kørt med undervolt siden ny.</p>
+          <a href="#" class="read-more">Læs mere</a>
+          <button class="btn btn-primary" type="button">Skriv til sælger</button>
+          <button class="btn btn-secondary" type="button">Giv et bud</button>
+        </article>
       </section>
     </main>
 
-    <script src="js/common.js"></script>
-    <script src="js/index.js"></script>
+    <script src="app.js"></script>
   </body>
 </html>
