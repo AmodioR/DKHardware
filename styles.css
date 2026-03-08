@@ -34,7 +34,7 @@ a {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  padding: 1.5rem 2.5rem;
+  padding: 1.1rem 2.5rem;
   border-bottom: 1px solid rgba(226, 233, 255, 0.45);
 }
 
@@ -45,7 +45,7 @@ a {
 }
 
 .brand-logo {
-  height: 36px;
+  height: 60px;
   width: auto;
   display: block;
 }
@@ -382,7 +382,11 @@ input[type="range"] {
 
 @media (max-width: 620px) {
   .site-header {
-    padding: 1rem;
+    padding: 0.85rem 1rem;
+  }
+
+  .brand-logo {
+    height: 56px;
   }
 
   .main-nav,
