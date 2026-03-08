@@ -37,10 +37,16 @@ a {
 .site-header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   gap: 1rem;
   padding: 1.1rem 2.5rem;
   border-bottom: 1px solid rgba(226, 233, 255, 0.45);
+}
+
+.header-right-group {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
 }
 
 body.kob-page .site-header {
@@ -66,7 +72,6 @@ body.kob-page .site-header {
 .main-nav {
   display: flex;
   gap: 1rem;
-  margin-left: 1.25rem;
 }
 
 .main-nav a {
@@ -492,6 +497,12 @@ body.kob-page .product-grid {
 
   .brand-logo {
     height: 56px;
+  }
+
+  .header-right-group {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 
   .main-nav,
