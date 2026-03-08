@@ -381,3 +381,17 @@ input[type="range"] {
     justify-content: center;
   }
 }
+
+.placeholder-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem 2.5rem;
+}
+
+.placeholder-page h1 {
+  margin-top: 0;
+}
+
+.placeholder-page p {
+  color: var(--text-soft);
+}
