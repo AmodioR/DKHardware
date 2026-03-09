@@ -19,8 +19,11 @@
           <a href="om.html">Om</a>
         </nav>
         <div class="header-actions">
-          <a class="btn btn-outline" href="profil.html">Login</a>
-          <button class="btn btn-muted" type="button">Kom i gang</button>
+          <a class="btn btn-outline" data-auth="login" href="profil.html">Login</a>
+          <button class="btn btn-muted" data-auth="start" type="button">Kom i gang</button>
+          <a class="profile-icon-link is-hidden" data-auth="profile" href="profil.html" aria-label="Min profil">
+            <span aria-hidden="true">👤</span>
+          </a>
         </div>
       </div>
     </header>
@@ -88,5 +91,6 @@
         </div>
       </section>
     </main>
+      <script src="js/demo-auth.js"></script>
   </body>
 </html>
