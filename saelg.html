@@ -29,7 +29,7 @@
     </header>
 
     <main class="sell-layout">
-      <section class="sell-card" aria-label="Opret opslag">
+      <section class="sell-card" id="sellCard" aria-label="Opret opslag">
         <h1>Opret nyt opslag</h1>
         <form id="sellForm" class="sell-form">
           <div class="filter-group">
@@ -94,6 +94,15 @@
           <button class="btn btn-primary" type="submit">Opret opslag</button>
           <p class="sell-feedback" id="sellFeedback" aria-live="polite"></p>
         </form>
+      </section>
+
+      <section class="sell-access-card is-hidden" id="sellAccessCard" aria-label="Log ind for adgang til salg">
+        <h1>Log ind for at oprette et opslag</h1>
+        <p>Du skal være logget ind for at kunne sætte hardware til salg på DK Hardware.</p>
+        <div class="sell-access-actions">
+          <a class="btn btn-outline" data-auth="login" href="profil.html">Login</a>
+          <button class="btn btn-muted" type="button">Kom i gang</button>
+        </div>
       </section>
     </main>
 

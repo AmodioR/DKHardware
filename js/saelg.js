@@ -186,54 +186,67 @@ const buildListing = (formData, imageSrc) => {
   };
 };
 
-categorySelect.addEventListener('change', syncBrandOptions);
-brandSelect.addEventListener('change', syncSeriesOptions);
 
-imageInput.addEventListener('change', async () => {
-  const [selectedFile] = imageInput.files || [];
+const sellCard = document.getElementById('sellCard');
+const sellAccessCard = document.getElementById('sellAccessCard');
+const isLoggedIn = localStorage.getItem('demoLoggedIn') === 'true';
 
-  if (!selectedFile) {
-    updateImagePreview('');
-    return;
-  }
+if (!isLoggedIn) {
+  sellCard.classList.add('is-hidden');
+  sellAccessCard.classList.remove('is-hidden');
+} else {
+  sellCard.classList.remove('is-hidden');
+  sellAccessCard.classList.add('is-hidden');
 
-  try {
-    const previewSrc = await readImageAsDataUrl(selectedFile);
-    updateImagePreview(previewSrc);
-    feedback.textContent = '';
-  } catch {
-    updateImagePreview('');
-    feedback.textContent = 'Billedet kunne ikke indlæses. Prøv en anden fil.';
-  }
-});
+  categorySelect.addEventListener('change', syncBrandOptions);
+  brandSelect.addEventListener('change', syncSeriesOptions);
 
-sellForm.addEventListener('submit', async (event) => {
-  event.preventDefault();
-  feedback.textContent = '';
+  imageInput.addEventListener('change', async () => {
+    const [selectedFile] = imageInput.files || [];
 
-  const formData = new FormData(sellForm);
-  const category = formData.get('category');
-  const [selectedFile] = imageInput.files || [];
-
-  let imageSrc = getFallbackImage(category);
-
-  if (selectedFile) {
-    try {
-      imageSrc = await readImageAsDataUrl(selectedFile);
-    } catch {
-      feedback.textContent = 'Billedet kunne ikke gemmes. Opslaget blev oprettet med standardbillede.';
+    if (!selectedFile) {
+      updateImagePreview('');
+      return;
     }
-  }
 
-  const listing = buildListing(formData, imageSrc);
-  saveUserListing(listing);
+    try {
+      const previewSrc = await readImageAsDataUrl(selectedFile);
+      updateImagePreview(previewSrc);
+      feedback.textContent = '';
+    } catch {
+      updateImagePreview('');
+      feedback.textContent = 'Billedet kunne ikke indlæses. Prøv en anden fil.';
+    }
+  });
 
-  if (!feedback.textContent) {
-    feedback.textContent = 'Opslag oprettet og gemt lokalt.';
-  }
-  sellForm.reset();
-  updateImagePreview('');
+  sellForm.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    feedback.textContent = '';
+
+    const formData = new FormData(sellForm);
+    const category = formData.get('category');
+    const [selectedFile] = imageInput.files || [];
+
+    let imageSrc = getFallbackImage(category);
+
+    if (selectedFile) {
+      try {
+        imageSrc = await readImageAsDataUrl(selectedFile);
+      } catch {
+        feedback.textContent = 'Billedet kunne ikke gemmes. Opslaget blev oprettet med standardbillede.';
+      }
+    }
+
+    const listing = buildListing(formData, imageSrc);
+    saveUserListing(listing);
+
+    if (!feedback.textContent) {
+      feedback.textContent = 'Opslag oprettet og gemt lokalt.';
+    }
+    sellForm.reset();
+    updateImagePreview('');
+    syncBrandOptions();
+  });
+
   syncBrandOptions();
-});
-
-syncBrandOptions();
+}
