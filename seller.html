@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hardware | Sælgerprofil</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand-link" href="index.html" aria-label="Hardware forside">
+        <img class="brand-logo" src="assets/logo.png" alt="Hardware logo" />
+      </a>
+      <div class="header-right-group">
+        <nav class="main-nav" aria-label="Primær navigation">
+          <a href="index.html">Hjem</a>
+          <a href="kob.html">Køb</a>
+          <a href="saelg.html">Sælg</a>
+          <a href="om.html">Om</a>
+        </nav>
+        <div class="header-actions">
+          <button class="btn btn-outline" type="button">Login</button>
+          <button class="btn btn-muted" type="button">Kom i gang</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="seller-layout">
+      <section class="seller-profile" id="sellerProfile"></section>
+      <section class="seller-rating" id="sellerRating"></section>
+
+      <section aria-label="Aktive annoncer">
+        <h2>Aktive annoncer</h2>
+        <div class="product-grid" id="sellerListingGrid"></div>
+      </section>
+    </main>
+
+    <script src="js/seller.js"></script>
+  </body>
+</html>

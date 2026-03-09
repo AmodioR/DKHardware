@@ -11,6 +11,7 @@ form.addEventListener("submit", (event) => {
     price: Number(formData.get("price")),
     estimatedMarketPrice: Number(formData.get("estimatedMarketPrice")),
     description: formData.get("description").trim(),
+    sellerId: "demo-seller-1",
   };
 
   saveUserListing(listing);

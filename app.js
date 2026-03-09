@@ -195,6 +195,7 @@ const createListingCard = (listing) => {
         <p class="price">${formatDkk(listing.price)}</p>
       </div>
       <p class="description">${listing.description}</p>
+      <a class="seller-link" href="seller.html?id=${encodeURIComponent(listing.sellerId || 'demo-seller-1')}">Se sælger</a>
       <a href="#" class="read-more">Læs mere</a>
       <button class="btn btn-primary" type="button">Skriv til sælger</button>
       <button class="btn btn-secondary" type="button">Giv et bud</button>

@@ -181,6 +181,7 @@ const buildListing = (formData, imageSrc) => {
     location: formData.get('location').trim(),
     description: formData.get('description').trim(),
     dealRating: 'fair',
+    sellerId: 'demo-seller-1',
     image: imageSrc || getFallbackImage(category)
   };
 };

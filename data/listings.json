@@ -12,7 +12,8 @@
     "distance": 12,
     "description": "Helt nyt kort, kun testet kort. Kvittering medfølger og klar til hurtig handel.",
     "dealRating": "good",
-    "image": "https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&w=800&q=80"
+    "image": "https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&w=800&q=80",
+    "sellerId": "demo-seller-1"
   },
   {
     "id": "listing-5070-ny-odense",
@@ -27,7 +28,8 @@
     "distance": 36,
     "description": "Ny i ubrudt emballage. Købt til et build der aldrig blev til noget.",
     "dealRating": "fair",
-    "image": "https://images.unsplash.com/photo-1591488320449-011701bb6705?auto=format&fit=crop&w=800&q=80"
+    "image": "https://images.unsplash.com/photo-1591488320449-011701bb6705?auto=format&fit=crop&w=800&q=80",
+    "sellerId": "demo-seller-2"
   },
   {
     "id": "listing-3080-brugt-aarhus",
@@ -42,7 +44,8 @@
     "distance": 8,
     "description": "Solid klassiker med normalt brugsspor. Perfekt som budgetkort til gaming setup.",
     "dealRating": "good",
-    "image": "https://images.unsplash.com/photo-1591799265444-d66432b91588?auto=format&fit=crop&w=800&q=80"
+    "image": "https://images.unsplash.com/photo-1591799265444-d66432b91588?auto=format&fit=crop&w=800&q=80",
+    "sellerId": "demo-seller-3"
   },
   {
     "id": "listing-4070-brugt-aalborg",
@@ -57,7 +60,8 @@
     "distance": 22,
     "description": "Velholdt kort med god temperatur og stabil ydelse. Sælges pga. opgradering.",
     "dealRating": "fair",
-    "image": "https://images.unsplash.com/photo-1593640495253-23196b27a87f?auto=format&fit=crop&w=800&q=80"
+    "image": "https://images.unsplash.com/photo-1593640495253-23196b27a87f?auto=format&fit=crop&w=800&q=80",
+    "sellerId": "demo-seller-1"
   },
   {
     "id": "listing-3090-brugt-esbjerg",
@@ -72,7 +76,8 @@
     "distance": 44,
     "description": "Ældre men driftssikkert kort. Ideelt til 4K gaming og CUDA arbejde.",
     "dealRating": "fair",
-    "image": "https://images.unsplash.com/photo-1555617981-dac3880eac6e?auto=format&fit=crop&w=800&q=80"
+    "image": "https://images.unsplash.com/photo-1555617981-dac3880eac6e?auto=format&fit=crop&w=800&q=80",
+    "sellerId": "demo-seller-2"
   },
   {
     "id": "listing-4090-brugt-roskilde",
@@ -87,7 +92,8 @@
     "distance": 55,
     "description": "Topmodel med ekstrem performance. Fremstår pæn, kørt med undervolt siden ny.",
     "dealRating": "good",
-    "image": "https://images.unsplash.com/photo-1624705002806-5d72df19c3de?auto=format&fit=crop&w=800&q=80"
+    "image": "https://images.unsplash.com/photo-1624705002806-5d72df19c3de?auto=format&fit=crop&w=800&q=80",
+    "sellerId": "demo-seller-3"
   },
   {
     "id": "listing-rx7900xtx-ny-vejle",
@@ -102,7 +108,8 @@
     "distance": 31,
     "description": "Helt ny og aldrig monteret. Kvittering fra dansk webshop medfølger.",
     "dealRating": "fair",
-    "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80"
+    "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
+    "sellerId": "demo-seller-1"
   },
   {
     "id": "listing-rx7800xt-brugt-horsens",
@@ -117,7 +124,8 @@
     "distance": 27,
     "description": "Brugt i ca. 8 måneder i røgfrit hjem. Stille kølere og ingen coil whine.",
     "dealRating": "fair",
-    "image": "https://images.unsplash.com/photo-1587202372616-b43abea06c2a?auto=format&fit=crop&w=800&q=80"
+    "image": "https://images.unsplash.com/photo-1587202372616-b43abea06c2a?auto=format&fit=crop&w=800&q=80",
+    "sellerId": "demo-seller-2"
   },
   {
     "id": "listing-rx6800xt-brugt-holbaek",
@@ -132,7 +140,8 @@
     "distance": 63,
     "description": "Kører stabilt og holder gode temperaturer. Sælges grundet skift til nyere generation.",
     "dealRating": "good",
-    "image": "https://images.unsplash.com/photo-1591405351990-4726e331f141?auto=format&fit=crop&w=800&q=80"
+    "image": "https://images.unsplash.com/photo-1591405351990-4726e331f141?auto=format&fit=crop&w=800&q=80",
+    "sellerId": "demo-seller-3"
   },
   {
     "id": "listing-arc-a770-ny-randers",
@@ -147,7 +156,8 @@
     "distance": 49,
     "description": "Ny i forseglet kasse. God til 1080p/1440p gaming og moderne codecs.",
     "dealRating": "fair",
-    "image": "https://images.unsplash.com/photo-1555680202-c86f0e12f086?auto=format&fit=crop&w=800&q=80"
+    "image": "https://images.unsplash.com/photo-1555680202-c86f0e12f086?auto=format&fit=crop&w=800&q=80",
+    "sellerId": "demo-seller-1"
   },
   {
     "id": "listing-ryzen9-brugt-kbh",
@@ -162,7 +172,8 @@
     "distance": 10,
     "description": "12 kerner, har kun været kørt med AIO-køling. Ingen bøjet pins.",
     "dealRating": "fair",
-    "image": "https://images.unsplash.com/photo-1518773553398-650c184e0bb3?auto=format&fit=crop&w=800&q=80"
+    "image": "https://images.unsplash.com/photo-1518773553398-650c184e0bb3?auto=format&fit=crop&w=800&q=80",
+    "sellerId": "demo-seller-2"
   },
   {
     "id": "listing-ryzen7-ny-odense",
@@ -177,7 +188,8 @@
     "distance": 34,
     "description": "Ny og uåbnet. Perfekt gaming-CPU med lavt strømforbrug.",
     "dealRating": "good",
-    "image": "https://images.unsplash.com/photo-1587202372583-49330a15584d?auto=format&fit=crop&w=800&q=80"
+    "image": "https://images.unsplash.com/photo-1587202372583-49330a15584d?auto=format&fit=crop&w=800&q=80",
+    "sellerId": "demo-seller-3"
   },
   {
     "id": "listing-ryzen5-brugt-silkeborg",
@@ -192,7 +204,8 @@
     "distance": 41,
     "description": "Fungerer fejlfrit, opgraderet til AM5. Original køler medfølger.",
     "dealRating": "good",
-    "image": "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&w=800&q=80"
+    "image": "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&w=800&q=80",
+    "sellerId": "demo-seller-1"
   },
   {
     "id": "listing-corei9-brugt-aarhus",
@@ -207,7 +220,8 @@
     "distance": 16,
     "description": "Kørt stock settings siden køb. Sælges pga. platformsskifte.",
     "dealRating": "fair",
-    "image": "https://images.unsplash.com/photo-1518186233392-c232efbf2373?auto=format&fit=crop&w=800&q=80"
+    "image": "https://images.unsplash.com/photo-1518186233392-c232efbf2373?auto=format&fit=crop&w=800&q=80",
+    "sellerId": "demo-seller-2"
   },
   {
     "id": "listing-corei7-ny-fredericia",
@@ -222,7 +236,8 @@
     "distance": 46,
     "description": "Ny i forseglet æske. Ingen bytte, kvittering haves.",
     "dealRating": "fair",
-    "image": "https://images.unsplash.com/photo-1555618254-9f2e0d7f26c0?auto=format&fit=crop&w=800&q=80"
+    "image": "https://images.unsplash.com/photo-1555618254-9f2e0d7f26c0?auto=format&fit=crop&w=800&q=80",
+    "sellerId": "demo-seller-3"
   },
   {
     "id": "listing-corei5-brugt-naestved",
@@ -237,7 +252,8 @@
     "distance": 68,
     "description": "God budget CPU til gaming. Har siddet i mini-ITX build uden problemer.",
     "dealRating": "fair",
-    "image": "https://images.unsplash.com/photo-1517420879524-86d64ac2f339?auto=format&fit=crop&w=800&q=80"
+    "image": "https://images.unsplash.com/photo-1517420879524-86d64ac2f339?auto=format&fit=crop&w=800&q=80",
+    "sellerId": "demo-seller-1"
   },
   {
     "id": "listing-corei3-ny-herning",
@@ -252,7 +268,8 @@
     "distance": 58,
     "description": "Nyt og ubrugt, stadig med plombering. Fint valg til kontor- eller budget-pc.",
     "dealRating": "good",
-    "image": "https://images.unsplash.com/photo-1587831990711-23ca6441447b?auto=format&fit=crop&w=800&q=80"
+    "image": "https://images.unsplash.com/photo-1587831990711-23ca6441447b?auto=format&fit=crop&w=800&q=80",
+    "sellerId": "demo-seller-2"
   },
   {
     "id": "listing-corsair-vengeance-brugt-koge",
@@ -267,7 +284,8 @@
     "distance": 24,
     "description": "2x16GB kit. Kører stabilt med XMP, ingen fejl i memtest.",
     "dealRating": "good",
-    "image": "https://images.unsplash.com/photo-1562976540-1502c2145186?auto=format&fit=crop&w=800&q=80"
+    "image": "https://images.unsplash.com/photo-1562976540-1502c2145186?auto=format&fit=crop&w=800&q=80",
+    "sellerId": "demo-seller-3"
   },
   {
     "id": "listing-corsair-dominator-ny-hillerod",
@@ -282,7 +300,8 @@
     "distance": 39,
     "description": "Nyt premium kit i ubrudt emballage. Lavprofil køleprofiler og RGB.",
     "dealRating": "fair",
-    "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80"
+    "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
+    "sellerId": "demo-seller-1"
   },
   {
     "id": "listing-kingston-furybeast-brugt-odder",
@@ -297,7 +316,8 @@
     "distance": 52,
     "description": "2x8GB. Perfekt til ældre gaming build, testet og klar til brug.",
     "dealRating": "good",
-    "image": "https://images.unsplash.com/photo-1517420704952-d9f39e95b43e?auto=format&fit=crop&w=800&q=80"
+    "image": "https://images.unsplash.com/photo-1517420704952-d9f39e95b43e?auto=format&fit=crop&w=800&q=80",
+    "sellerId": "demo-seller-2"
   },
   {
     "id": "listing-kingston-furyrenegade-ny-viborg",
@@ -312,7 +332,8 @@
     "distance": 61,
     "description": "Uåbnet kit med høj hastighed. Kvittering og garanti medfølger.",
     "dealRating": "good",
-    "image": "https://images.unsplash.com/photo-1587202372616-b43abea06c2a?auto=format&fit=crop&w=800&q=80"
+    "image": "https://images.unsplash.com/photo-1587202372616-b43abea06c2a?auto=format&fit=crop&w=800&q=80",
+    "sellerId": "demo-seller-3"
   },
   {
     "id": "listing-gskill-tridentz-brugt-roslev",
@@ -327,7 +348,8 @@
     "distance": 73,
     "description": "2x16GB med lav latency. Har kørt stabilt på DOCP/XMP.",
     "dealRating": "fair",
-    "image": "https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&fit=crop&w=800&q=80"
+    "image": "https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&fit=crop&w=800&q=80",
+    "sellerId": "demo-seller-1"
   },
   {
     "id": "listing-gskill-ripjaws-ny-greve",
@@ -342,7 +364,8 @@
     "distance": 19,
     "description": "Nyt 2x8GB kit. Godt til budget build eller opgradering.",
     "dealRating": "good",
-    "image": "https://images.unsplash.com/photo-1517420879524-86d64ac2f339?auto=format&fit=crop&w=800&q=80"
+    "image": "https://images.unsplash.com/photo-1517420879524-86d64ac2f339?auto=format&fit=crop&w=800&q=80",
+    "sellerId": "demo-seller-2"
   },
   {
     "id": "listing-crucial-ballistix-brugt-hobro",
@@ -357,7 +380,8 @@
     "distance": 66,
     "description": "Velholdt kit i fin stand. Sælges da jeg er skiftet til DDR5 platform.",
     "dealRating": "good",
-    "image": "https://images.unsplash.com/photo-1562976540-1502c2145186?auto=format&fit=crop&w=800&q=80"
+    "image": "https://images.unsplash.com/photo-1562976540-1502c2145186?auto=format&fit=crop&w=800&q=80",
+    "sellerId": "demo-seller-3"
   },
   {
     "id": "listing-bundkort-asus-brugt-kolding",
@@ -372,7 +396,8 @@
     "distance": 33,
     "description": "AM5 bundkort i flot stand med original emballage og WiFi-antenne.",
     "dealRating": "good",
-    "image": "https://images.unsplash.com/photo-1518773553398-650c184e0bb3?auto=format&fit=crop&w=800&q=80"
+    "image": "https://images.unsplash.com/photo-1518773553398-650c184e0bb3?auto=format&fit=crop&w=800&q=80",
+    "sellerId": "demo-seller-1"
   },
   {
     "id": "listing-lager-samsung-ny-slagelse",
@@ -387,7 +412,8 @@
     "distance": 47,
     "description": "Ny og forseglet NVMe SSD med høj hastighed til gaming eller arbejde.",
     "dealRating": "good",
-    "image": "https://images.unsplash.com/photo-1597852074816-d933c7d2b988?auto=format&fit=crop&w=800&q=80"
+    "image": "https://images.unsplash.com/photo-1597852074816-d933c7d2b988?auto=format&fit=crop&w=800&q=80",
+    "sellerId": "demo-seller-2"
   },
   {
     "id": "listing-psu-corsair-brugt-glostrup",
@@ -402,7 +428,8 @@
     "distance": 18,
     "description": "Fuldt modulær PSU med alle kabler. Har kørt stabilt i 1,5 år.",
     "dealRating": "fair",
-    "image": "https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&w=800&q=80"
+    "image": "https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&w=800&q=80",
+    "sellerId": "demo-seller-3"
   },
   {
     "id": "listing-kabinet-fractal-ny-soenderborg",
@@ -417,7 +444,8 @@
     "distance": 64,
     "description": "Nyt kabinet med træfront og hærdet glas. Uåbnet og med kvittering.",
     "dealRating": "good",
-    "image": "https://images.unsplash.com/photo-1587831990711-23ca6441447b?auto=format&fit=crop&w=800&q=80"
+    "image": "https://images.unsplash.com/photo-1587831990711-23ca6441447b?auto=format&fit=crop&w=800&q=80",
+    "sellerId": "demo-seller-1"
   },
   {
     "id": "listing-cpu-koeler-noctua-brugt-haderslev",
@@ -432,7 +460,8 @@
     "distance": 42,
     "description": "Komplet med AM4/AM5 beslag. Meget stille og effektiv luftkøler.",
     "dealRating": "good",
-    "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80"
+    "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
+    "sellerId": "demo-seller-2"
   },
   {
     "id": "listing-kabinetkoeler-arctic-ny-hjoerring",
@@ -447,7 +476,8 @@
     "distance": 71,
     "description": "Nye kabinetkølere i 5-pack. Perfekt airflow-opgradering til gaming kabinet.",
     "dealRating": "good",
-    "image": "https://images.unsplash.com/photo-1593640495253-23196b27a87f?auto=format&fit=crop&w=800&q=80"
+    "image": "https://images.unsplash.com/photo-1593640495253-23196b27a87f?auto=format&fit=crop&w=800&q=80",
+    "sellerId": "demo-seller-3"
   },
   {
     "id": "listing-bundkort-msi-ny-herning",
@@ -462,7 +492,8 @@
     "distance": 38,
     "description": "Nyt AM5 bundkort i ubrudt emballage med stærk VRM og indbygget WiFi.",
     "dealRating": "good",
-    "image": "https://images.unsplash.com/photo-1518773553398-650c184e0bb3?auto=format&fit=crop&w=800&q=80"
+    "image": "https://images.unsplash.com/photo-1518773553398-650c184e0bb3?auto=format&fit=crop&w=800&q=80",
+    "sellerId": "demo-seller-1"
   },
   {
     "id": "listing-bundkort-gigabyte-brugt-koege",
@@ -477,7 +508,8 @@
     "distance": 26,
     "description": "LGA1700 bundkort i god stand. BIOS opdateret og klar til 13./14. gen Intel.",
     "dealRating": "good",
-    "image": "https://images.unsplash.com/photo-1518773553398-650c184e0bb3?auto=format&fit=crop&w=800&q=80"
+    "image": "https://images.unsplash.com/photo-1518773553398-650c184e0bb3?auto=format&fit=crop&w=800&q=80",
+    "sellerId": "demo-seller-2"
   },
   {
     "id": "listing-lager-wd-brugt-hillerod",
@@ -492,7 +524,8 @@
     "distance": 34,
     "description": "Brugt som spil-drev i under et år. 99% health ifølge CrystalDiskInfo.",
     "dealRating": "good",
-    "image": "https://images.unsplash.com/photo-1597852074816-d933c7d2b988?auto=format&fit=crop&w=800&q=80"
+    "image": "https://images.unsplash.com/photo-1597852074816-d933c7d2b988?auto=format&fit=crop&w=800&q=80",
+    "sellerId": "demo-seller-3"
   },
   {
     "id": "listing-lager-crucial-ny-naestved",
@@ -507,7 +540,8 @@
     "distance": 46,
     "description": "Ny og forseglet 2TB SSD til hurtig opgradering af ældre systemer.",
     "dealRating": "fair",
-    "image": "https://images.unsplash.com/photo-1597852074816-d933c7d2b988?auto=format&fit=crop&w=800&q=80"
+    "image": "https://images.unsplash.com/photo-1597852074816-d933c7d2b988?auto=format&fit=crop&w=800&q=80",
+    "sellerId": "demo-seller-1"
   },
   {
     "id": "listing-psu-seasonic-ny-fredericia",
@@ -522,7 +556,8 @@
     "distance": 29,
     "description": "80+ Gold, fuldt modulær og 10 års garanti. Kvittering medfølger.",
     "dealRating": "good",
-    "image": "https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&w=800&q=80"
+    "image": "https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&w=800&q=80",
+    "sellerId": "demo-seller-2"
   },
   {
     "id": "listing-psu-bequiet-brugt-silkeborg",
@@ -537,7 +572,8 @@
     "distance": 41,
     "description": "ATX 3.0 strømforsyning i meget fin stand. Alle kabler og original kasse medfølger.",
     "dealRating": "fair",
-    "image": "https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&w=800&q=80"
+    "image": "https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&w=800&q=80",
+    "sellerId": "demo-seller-3"
   },
   {
     "id": "listing-kabinet-nzxt-brugt-holstebro",
@@ -552,7 +588,8 @@
     "distance": 58,
     "description": "Pænt kabinet med god airflow. Et par små brugsspor ved PCIe slots.",
     "dealRating": "good",
-    "image": "https://images.unsplash.com/photo-1587831990711-23ca6441447b?auto=format&fit=crop&w=800&q=80"
+    "image": "https://images.unsplash.com/photo-1587831990711-23ca6441447b?auto=format&fit=crop&w=800&q=80",
+    "sellerId": "demo-seller-1"
   },
   {
     "id": "listing-kabinet-corsair-ny-ribe",
@@ -567,7 +604,8 @@
     "distance": 62,
     "description": "Nyt midi tower med mesh frontpanel. Perfekt til luftkølede builds.",
     "dealRating": "fair",
-    "image": "https://images.unsplash.com/photo-1587831990711-23ca6441447b?auto=format&fit=crop&w=800&q=80"
+    "image": "https://images.unsplash.com/photo-1587831990711-23ca6441447b?auto=format&fit=crop&w=800&q=80",
+    "sellerId": "demo-seller-2"
   },
   {
     "id": "listing-cpu-koeler-corsair-ny-helsingor",
@@ -582,7 +620,8 @@
     "distance": 37,
     "description": "360mm AIO vandkøler, uåbnet. Indeholder alt monteringsudstyr.",
     "dealRating": "good",
-    "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80"
+    "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
+    "sellerId": "demo-seller-3"
   },
   {
     "id": "listing-cpu-koeler-arctic-brugt-farum",
@@ -597,7 +636,8 @@
     "distance": 21,
     "description": "Velholdt AIO med meget lav støj. Brugt i cirka 10 måneder.",
     "dealRating": "good",
-    "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80"
+    "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
+    "sellerId": "demo-seller-1"
   },
   {
     "id": "listing-kabinetkoeler-noctua-brugt-ringsted",
@@ -612,7 +652,8 @@
     "distance": 32,
     "description": "To premium kabinetkølere i rigtig god stand. Inkl. anti-vibrationshjørner.",
     "dealRating": "good",
-    "image": "https://images.unsplash.com/photo-1593640495253-23196b27a87f?auto=format&fit=crop&w=800&q=80"
+    "image": "https://images.unsplash.com/photo-1593640495253-23196b27a87f?auto=format&fit=crop&w=800&q=80",
+    "sellerId": "demo-seller-2"
   },
   {
     "id": "listing-kabinetkoeler-bequiet-ny-skive",
@@ -627,6 +668,7 @@
     "distance": 67,
     "description": "Ny enkeltkøler med fokus på lav støj og høj statisk tryk.",
     "dealRating": "good",
-    "image": "https://images.unsplash.com/photo-1593640495253-23196b27a87f?auto=format&fit=crop&w=800&q=80"
+    "image": "https://images.unsplash.com/photo-1593640495253-23196b27a87f?auto=format&fit=crop&w=800&q=80",
+    "sellerId": "demo-seller-3"
   }
 ]
