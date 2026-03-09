@@ -1,0 +1,29 @@
+[
+  {
+    "id": "demo-seller-1",
+    "name": "Mikkel Jensen",
+    "location": "København",
+    "bio": "Jeg sælger primært velholdte GPU'er og CPU'er fra egne builds. Hurtig kommunikation og gennemsigtige handler.",
+    "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80",
+    "ratingTitle": "Denne sælger er vurderet positivt",
+    "ratingText": "Sælgeren svarer hurtigt, beskriver varerne præcist og handler konsekvent til fair markedsniveau."
+  },
+  {
+    "id": "demo-seller-2",
+    "name": "Sofie Larsen",
+    "location": "Aarhus",
+    "bio": "Hardware-entusiast der opgraderer ofte. Alle annoncer testes før salg, og jeg pakker sikkert ved forsendelse.",
+    "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=400&q=80",
+    "ratingTitle": "Stabil og troværdig sælger",
+    "ratingText": "Tidligere handler viser god respons, tydelig dokumentation og fair prisniveau på tværs af annoncer."
+  },
+  {
+    "id": "demo-seller-3",
+    "name": "Andreas Holm",
+    "location": "Odense",
+    "bio": "Sælger nyere komponenter fra testbænke og overskudsdele. Fokus på ærlige beskrivelser og hurtig overdragelse.",
+    "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80",
+    "ratingTitle": "Kendt for fair handler",
+    "ratingText": "Sælgeren er vurderet positivt for tydelig kommunikation, realistiske priser og pålidelig levering/afhentning."
+  }
+]

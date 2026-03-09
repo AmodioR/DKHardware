@@ -746,3 +746,106 @@ textarea:focus-visible {
     margin: 0 auto;
   }
 }
+
+.seller-link {
+  display: inline-block;
+  margin: 0 0.9rem 0.35rem;
+  color: #dbe4ff;
+  font-size: 0.86rem;
+  text-underline-offset: 3px;
+}
+
+.seller-layout {
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 2rem 2.5rem 3rem;
+}
+
+.seller-profile {
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1fr) auto;
+  gap: 1.25rem;
+  align-items: center;
+  padding-bottom: 1.4rem;
+  border-bottom: 1px solid rgba(226, 233, 255, 0.45);
+}
+
+.seller-avatar {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.seller-meta h1 {
+  margin: 0;
+  font-size: clamp(1.8rem, 3vw, 3rem);
+}
+
+.seller-location {
+  margin: 0.2rem 0 0.5rem;
+  color: var(--text-soft);
+}
+
+.seller-bio {
+  margin: 0;
+  max-width: 70ch;
+  line-height: 1.5;
+}
+
+.follow-btn {
+  align-self: start;
+  margin-top: 0.4rem;
+  min-width: 150px;
+}
+
+.follow-btn.is-following {
+  background: #586188;
+}
+
+.seller-rating {
+  margin: 1rem 0 2rem;
+  max-width: 560px;
+  display: flex;
+  align-items: start;
+  gap: 0.75rem;
+  background: linear-gradient(180deg, #3e4f8d 0%, #36477f 100%);
+  border-radius: 1rem;
+  padding: 0.9rem 1rem;
+}
+
+.rating-star {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: rgba(4, 20, 62, 0.95);
+  color: #ffcb66;
+  flex-shrink: 0;
+}
+
+.seller-rating h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.seller-rating p {
+  margin: 0.4rem 0 0;
+  color: #e2e7f8;
+}
+
+@media (max-width: 900px) {
+  .seller-profile {
+    grid-template-columns: 1fr;
+  }
+
+  .seller-avatar {
+    width: 130px;
+    height: 130px;
+  }
+
+  .follow-btn {
+    justify-self: start;
+  }
+}
