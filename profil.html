@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hardware | Min profil</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand-link" href="index.html" aria-label="Hardware forside">
+        <img class="brand-logo" src="assets/logo.png" alt="Hardware logo" />
+      </a>
+      <div class="header-right-group">
+        <nav class="main-nav" aria-label="Primær navigation">
+          <a href="index.html">Hjem</a>
+          <a href="kob.html">Køb</a>
+          <a href="saelg.html">Sælg</a>
+          <a href="om.html">Om</a>
+        </nav>
+        <div class="header-actions">
+          <button class="btn btn-outline" type="button">Login</button>
+          <button class="btn btn-muted" type="button">Kom i gang</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="seller-layout owner-layout">
+      <aside class="owner-stats-panel" aria-label="Statistik">
+        <h2>Statistik</h2>
+
+        <section class="owner-stat-group" aria-label="Salg statistik">
+          <h3>Salg</h3>
+          <div class="owner-stat-donut owner-stat-donut-sales" role="img" aria-label="Salg fordelt mellem til salg og solgt"></div>
+          <ul class="owner-stat-legend">
+            <li><span class="legend-dot legend-blue"></span>Til salg: 8.583 kr.</li>
+            <li><span class="legend-dot legend-green"></span>Solgt for: 7.643 kr.</li>
+          </ul>
+        </section>
+
+        <section class="owner-stat-group" aria-label="Rating statistik">
+          <h3>Rating</h3>
+          <div class="owner-stat-donut owner-stat-donut-rating" role="img" aria-label="Rating fordelt mellem god, fair og dårlig"></div>
+          <ul class="owner-stat-legend">
+            <li><span class="legend-dot legend-yellow"></span>God: 56.4%</li>
+            <li><span class="legend-dot legend-green"></span>Fair: 33.2%</li>
+            <li><span class="legend-dot legend-red"></span>Dårlig: 10.4%</li>
+          </ul>
+        </section>
+      </aside>
+
+      <div class="owner-main-content">
+        <section class="seller-profile" id="ownerProfile"></section>
+
+        <section class="owner-info-cards">
+          <section class="seller-rating" id="ownerRating"></section>
+          <section class="seller-rating owner-improvement-card" id="ownerImprovement"></section>
+        </section>
+
+        <section aria-label="Aktive annoncer">
+          <h2>Aktive annoncer</h2>
+          <div class="product-grid" id="ownerListingGrid"></div>
+        </section>
+      </div>
+    </main>
+
+    <script src="js/owner.js"></script>
+  </body>
+</html>

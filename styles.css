@@ -849,3 +849,139 @@ textarea:focus-visible {
     justify-self: start;
   }
 }
+
+.owner-layout {
+  display: grid;
+  grid-template-columns: 340px minmax(0, 1fr);
+  gap: 2rem;
+  align-items: start;
+}
+
+.owner-main-content {
+  min-width: 0;
+}
+
+.owner-stats-panel {
+  background: linear-gradient(180deg, #2a385d 0%, #293355 100%);
+  border-radius: 2rem;
+  padding: 1.75rem;
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 1.5rem;
+}
+
+.owner-stats-panel h2 {
+  margin: 0 0 1.5rem;
+  font-size: clamp(2rem, 3vw, 3rem);
+}
+
+.owner-stat-group + .owner-stat-group {
+  margin-top: 2.5rem;
+}
+
+.owner-stat-group h3 {
+  margin: 0 0 1rem;
+  font-size: 2rem;
+}
+
+.owner-stat-donut {
+  width: 190px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+  position: relative;
+}
+
+.owner-stat-donut::after {
+  content: '';
+  position: absolute;
+  inset: 39px;
+  border-radius: 50%;
+  background: #2a3658;
+}
+
+.owner-stat-donut-sales {
+  background: conic-gradient(#175ef3 0 53%, #09c678 53% 100%);
+}
+
+.owner-stat-donut-rating {
+  background: conic-gradient(#f4bf5b 0 56.4%, #09c678 56.4% 89.6%, #f6485d 89.6% 100%);
+}
+
+.owner-stat-legend {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.65rem;
+}
+
+.owner-stat-legend li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.legend-dot {
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.legend-blue {
+  background: #175ef3;
+}
+
+.legend-green {
+  background: #09c678;
+}
+
+.legend-yellow {
+  background: #f4bf5b;
+}
+
+.legend-red {
+  background: #f6485d;
+}
+
+.owner-edit-profile-btn {
+  min-width: 160px;
+}
+
+.owner-info-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 1rem 0 2rem;
+}
+
+.owner-info-cards .seller-rating {
+  max-width: none;
+  margin: 0;
+  min-height: 132px;
+}
+
+.owner-improvement-card {
+  align-items: center;
+}
+
+.owner-improvement-card p {
+  margin: 0;
+}
+
+@media (max-width: 1100px) {
+  .owner-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .owner-stats-panel {
+    position: static;
+  }
+
+  .owner-info-cards {
+    grid-template-columns: 1fr;
+  }
+}
