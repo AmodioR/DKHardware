@@ -19,7 +19,9 @@
           <a href="om.html">Om</a>
         </nav>
         <div class="header-actions">
-          <a class="profile-icon-link" href="profil.html" aria-label="Min profil">
+          <a class="btn btn-outline" data-auth="login" href="profil.html">Login</a>
+          <button class="btn btn-muted" data-auth="start" type="button">Kom i gang</button>
+          <a class="profile-icon-link is-hidden" data-auth="profile" href="profil.html" aria-label="Min profil">
             <span aria-hidden="true">👤</span>
           </a>
         </div>
@@ -62,9 +64,14 @@
           <h2>Aktive annoncer</h2>
           <div class="product-grid" id="ownerListingGrid"></div>
         </section>
+
+        <section class="owner-logout-section" aria-label="Log ud">
+          <button class="btn btn-outline" data-auth="logout" type="button">Logout</button>
+        </section>
       </div>
     </main>
 
     <script src="js/owner.js"></script>
+    <script src="js/demo-auth.js"></script>
   </body>
 </html>
