@@ -94,6 +94,24 @@ body.kob-page .site-header {
   gap: 0.75rem;
 }
 
+.profile-icon-link {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 999px;
+  border: 1px solid var(--outline);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #e5ecff;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.profile-icon-link:hover,
+.profile-icon-link:focus-visible {
+  background: rgba(255, 255, 255, 0.14);
+}
+
 .marketplace-layout {
   display: grid;
   grid-template-columns: 360px minmax(0, 1fr);
